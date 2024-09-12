@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #141414;
+  --foreground: #fff;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +15,41 @@
   }
 }
 
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:  Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+  overflow-x: hidden;
 }
+
+h1{
+  font-weight: 400;
+}
+
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .search-input {
+    width: 0;
+    transition: width 0.5s ease, opacity 0.3s ease, padding 0.5s ease;
+    border: none;
+    background: transparent;
+    color: white;
+    outline: none;
+  }
+  
+
+  .search-input.expanded {
+    width: 200px;
+    opacity: 1;
+    
+  }
+  
 }
+
+

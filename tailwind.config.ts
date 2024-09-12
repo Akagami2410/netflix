@@ -11,6 +11,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        fade: "rgb(128,128,128)",
+      },
+      borderWidth: {
+        "2": "1px",
+        "3": "3px",
       },
     },
   },
